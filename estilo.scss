@@ -42,6 +42,7 @@
                         color: $grisHover;        
                        } 
                        a {    
+                           padding: 2rem 0rem;
                            color:$gris;              
                            text-transform:uppercase;          
                            font-size:1rem;    
@@ -104,9 +105,34 @@
         color: $blanco;
         .main__fotoinicio {
             padding: 1rem;
+        }          
+            
+        .img_izq_s {
+                padding: 0.5rem;
+                border-radius: 1rem;
+                cursor: pointer;
+                &:active {
+                   transform: scale(1.8) translate(4rem, 1rem);
+                   transition: all 500ms ease-in-out;
+                }
+            
+        }
+            
+        .img_der_s {
+            padding: 0.5rem;
+            border-radius: 1rem;
+            cursor: pointer;
+                &:active {
+            
+                      transform: scale(1.8) translate(-4rem, 1rem);
+                      transition: all 500ms ease-in-out;
+                         }
+            
+               }
+            
         }
            
-    }
+    
 
 
 
@@ -190,7 +216,7 @@
                        @include widthPaddingObject (65%,0rem ,contain);
                    }
                  .header__titulo--perfiles {
-                        @include widthPaddingObject (24%,0.5rem ,contain);
+                        @include widthPaddingObject (25%,0.2rem ,contain);
                  }
                  .header__titulo--contacto {
                     @include centradoFlex (25%,flex ,center);
@@ -205,7 +231,8 @@
                        a {    
                            color:$gris;              
                            text-transform:uppercase;          
-                           font-size:1.6rem;    
+                           font-size:1.6rem; 
+                           padding: 3.5rem 0rem;   
                         }
                   }
 
@@ -266,6 +293,29 @@
         .main__fotoinicio {
             padding: 1rem;
         }
+        /*------efecto de zoom-----*/
+        .img_izq_s {
+            padding: 0.5rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            &:active {
+               transform: scale(1.5) translate(4rem, 1rem);
+               transition: all 500ms ease-in-out;
+            }
+        
+        }
+        
+        .img_der_s {
+                padding: 0.5rem;
+                 border-radius: 1rem;
+                cursor: pointer;
+                &:active {        
+                      transform: scale(1.5) translate(-4rem, 1rem);
+                      transition: all 500ms ease-in-out;
+                }
+        
+        }
+        
            
     }
 
@@ -311,3 +361,340 @@
 
 }
 }
+
+/*---------------------------------- VISTA TABLET------------------------------- */
+
+@media only screen and (min-width:768px) and (max-width:992px) {   
+
+ /*---------------------header tablet----------------*/
+          .header {      
+            
+            background-color: $negro;            
+            @include centradoFlex (100%,flex ,center);
+            padding: 0.5rem;
+            .header__titulo {
+                   width: 100%;
+             
+                  .header__logo {
+                      width: 15%;
+                       #logo {
+                            @include widthPaddingObject (100%,0rem ,cover);
+                             height: 10rem;
+                             } 
+                  }
+                  #titulo {
+                       padding: 0.5rem 0rem;
+                   }
+                 .header__titulo--perfiles {
+                        @include widthPaddingObject (16%,0.5rem ,cover);
+                 }
+                 .header__titulo--contacto {
+                    @include centradoFlex (16%,flex ,center);
+                       align-items: center;
+                       background-color: $negroButton;
+                       border-radius: 0.6rem;
+                       transition: all 150ms ease-in-out;
+                       &:hover {            
+                        background-color:$negroHover;    
+                        color: $grisHover;        
+                       } 
+                       a {    
+                           color:$gris;              
+                           text-transform:uppercase;          
+                           font-size:1.2rem; 
+                           padding: 3.8rem 1rem;   
+                        }
+                  }
+
+            } 
+            
+         }
+
+     /*----------------navbar TABLET--------------------*/
+         
+    nav {
+            @include navbar_sticky (100%,sticky,0,#1f1e1e);
+             position: -webkit-sticky; /* Safari */
+             .menu_centrado {
+                @include centradoFlex (100%,flex ,space-around);           
+                .navbar-nav  {    
+                       padding: 0rem;                
+                       text-align: center;
+                       li {
+                           padding: 0.1rem 0.3rem;               
+                           a {    
+                               padding: 0.2rem 0rem;
+                               text-transform: uppercase;         
+                               color: $gris;                    
+                               font-size: 1.7rem;                   
+                               transition: all 150ms ease-in-out;        
+                               border-radius: 0.3rem;
+                               &:hover {                
+                                    background-color: $negroHover;                  
+                                    padding: 0.3rem;                    
+                                } 
+                            }  
+                        }                
+                 }
+             }
+     }
+
+     /*---------------main tablet------------------*/
+
+    .main {
+        width: 100%;
+        background-image: url("./../assets/img/logo.jpg") ;
+        background-size: contain;
+        padding: 0.2rem;
+        text-align: center;
+        color: $blanco;
+        .main__fotoinicio {
+            padding: 1rem;
+        }
+        /*------efecto de zoom para tablet (son tres filas de imagenes)-----*/
+        .img_izq {
+            padding: 0.2rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            &:active {
+               transform: scale(2) translate(4rem, 1rem);
+               transition: all 500ms ease-in-out;
+            }
+        
+        }
+        .img_cen {
+            padding: 0.2rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            &:active {
+               transform: scale(2) translate(0rem, 1rem);
+               transition: all 500ms ease-in-out;
+            }
+        
+        }
+        
+        .img_der {
+                padding: 0.2rem;
+                 border-radius: 1rem;
+                cursor: pointer;
+                &:active {        
+                      transform: scale(2) translate(-4rem, 1rem);
+                      transition: all 500ms ease-in-out;
+                }
+            }
+    }
+
+
+
+
+
+
+    /*------------footer tablet-----------*/
+
+.footer {
+    color: $gris;
+    background-color:$negro;
+    padding: 1rem 0rem;
+    @include centradoFlex (100%,flex ,center);
+    .footer_centrado {
+        width: 95%;
+        font-size: 1rem;
+        .footer__contacto {    
+            padding: 1rem;  
+            width: 50%;        
+        }
+        .footer__redes {
+            padding: 3.5rem 1rem;
+            li {        
+                line-height: 2rem;
+                a{
+                    margin: 0.2rem;
+                    text-decoration: none;
+                    color:$gris;                    
+                 }
+             }
+         }
+        .footer__ubicacion {
+            padding: 0.8rem;
+            width: 100%;
+            iframe {
+                width: 100%;
+                height: 90%;
+            }
+        }
+     
+    }
+
+
+}
+}
+
+/*----------------------------- VISTA ESCRITORIO ---------------------------*/
+
+@media only screen and (min-width:992px) {
+    /*arranco de 992px para porder trabajar en conjunto con la medida "lg" de bootstrap  */
+       
+    
+    /* -------------header desktop---------- */
+             .header {      
+               
+               background-color: $negro;            
+               @include centradoFlex (100%,flex ,center);
+               padding: 0.5rem 0rem;
+               .header__titulo {
+                      width: 100%;
+                
+                     .header__logo {
+                         
+                         @include centradoFlex (18%,flex ,center);
+                          align-items: center;
+                          #logo {
+                               @include widthPaddingObject (100%,0rem ,cover);
+                                height: 10rem;
+                                } 
+                     }
+                     #titulo {
+                          padding: 1rem 0rem;
+                      }
+                    .header__titulo--perfiles {
+                           @include widthPaddingObject (16%,0.5rem ,cover);
+                    }
+                    .header__titulo--contacto {
+                          @include centradoFlex (16%,flex ,center);
+                          align-items: center;
+                          background-color: $negroButton;
+                          border-radius: 0.6rem;
+                          transition: all 150ms ease-in-out;
+                          &:hover {            
+                           background-color:$negroHover;    
+                           color: $grisHover;        
+                          } 
+                          a {    
+                              color:$gris;              
+                              text-transform:uppercase;          
+                              font-size:1.7rem;
+                              padding:3.8rem  1.5rem;    
+                           }
+                     }
+   
+               } 
+               
+            }
+   
+        /*----------------navbar desktop--------------------*/
+            
+       nav {
+               @include navbar_sticky (100%,sticky,0,#1f1e1e);
+                position: -webkit-sticky; /* Safari */
+                .menu_centrado {
+                   @include centradoFlex (100%,flex ,space-around);           
+                   .navbar-nav  {    
+                          padding: 0rem;                
+                          li {
+                              padding: 0.1rem 1.1rem;               
+                              a {    
+                                  padding: 1rem;
+                                  text-transform: uppercase;         
+                                  color: $gris;                    
+                                  font-size: 2rem;                   
+                                  transition: all 150ms ease-in-out;        
+                                  border-radius: 0.3rem;
+                                  &:hover {                
+                                       background-color: $negroHover;                  
+                                       padding: 1.1rem;                    
+                                   } 
+                               }  
+                           }                
+                    }
+                }
+        }
+   
+        /*---------------main tablet------------------*/
+   
+       .main {
+           width: 100%;
+           background-image: url("./../assets/img/logo.jpg") ;
+           background-size: contain;
+           padding:2rem;
+           text-align: center;
+           color: $blanco;
+           .main__fotoinicio {
+               width: 90%;
+           }
+           /*------efecto de zoom para desktop (son tres filas de imagenes)-----*/
+        .img_izq {
+            padding: 0.2rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            &:active {
+               transform: scale(1.5) translate(4rem, 1rem);
+               transition: all 500ms ease-in-out;
+            }
+        
+        }
+        .img_cen {
+            padding: 0.2rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            &:active {
+               transform: scale(1.5) translate(0rem, 1rem);
+               transition: all 500ms ease-in-out;
+            }
+        
+        }
+        
+        .img_der {
+                padding: 0.2rem;
+                 border-radius: 1rem;
+                cursor: pointer;
+                &:active {        
+                      transform: scale(1.5) translate(-4rem, 1rem);
+                      transition: all 500ms ease-in-out;
+                }
+            }
+              
+       }
+   
+   
+   
+   
+   
+   
+       /*------------footer desktop-----------*/
+   
+   .footer {
+       color: $gris;
+       background-color:$negro;
+       padding: 1rem 0rem;
+       @include centradoFlex (100%,flex ,center);
+       .footer_centrado {
+           width: 95%;
+           font-size: 1rem;
+           .footer__contacto {    
+               padding: 0rem;          
+           }
+           .footer__redes {
+               padding: 3rem 1rem;
+               li {        
+                   line-height: 2rem;
+                   a{
+                       margin: 0.2rem;
+                       text-decoration: none;
+                       color:$gris;                    
+                    }
+                }
+            }
+           .footer__ubicacion {
+               padding: 3rem 0rem;
+               width: 33%;
+               iframe {
+                   width: 100%;
+                   height: 90%;
+               }
+           }
+        
+       }
+   
+   
+   }
+   }

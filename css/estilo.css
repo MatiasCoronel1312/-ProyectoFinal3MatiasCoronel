@@ -61,6 +61,7 @@
     color: #c9c8c8;
   }
   .header .header__titulo .header__titulo--contacto a {
+    padding: 2rem 0rem;
     color: #837f7c;
     text-transform: uppercase;
     font-size: 1rem;
@@ -108,6 +109,24 @@
   }
   .main .main__fotoinicio {
     padding: 1rem;
+  }
+  .main .img_izq_s {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_izq_s:active {
+    transform: scale(1.8) translate(4rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  .main .img_der_s {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_der_s:active {
+    transform: scale(1.8) translate(-4rem, 1rem);
+    transition: all 500ms ease-in-out;
   }
   /*-------------------footer mobile---------------------*/
   .footer {
@@ -174,8 +193,8 @@
     object-fit: contain;
   }
   .header .header__titulo .header__titulo--perfiles {
-    width: 24%;
-    padding: 0.5rem;
+    width: 25%;
+    padding: 0.2rem;
     object-fit: contain;
   }
   .header .header__titulo .header__titulo--contacto {
@@ -195,6 +214,7 @@
     color: #837f7c;
     text-transform: uppercase;
     font-size: 1.6rem;
+    padding: 3.5rem 0rem;
   }
   /*----------------navbar movil L--------------------*/
   nav {
@@ -236,9 +256,28 @@
     padding: 0.2rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.932);
+    /*------efecto de zoom-----*/
   }
   .main .main__fotoinicio {
     padding: 1rem;
+  }
+  .main .img_izq_s {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_izq_s:active {
+    transform: scale(1.5) translate(4rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  .main .img_der_s {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_der_s:active {
+    transform: scale(1.5) translate(-4rem, 1rem);
+    transition: all 500ms ease-in-out;
   }
   /*-------------------footer mobile L ---------------------*/
   .footer {
@@ -269,6 +308,328 @@
   .footer .footer_centrado .footer__ubicacion {
     padding: 0.8rem;
     width: 100%;
+  }
+  .footer .footer_centrado .footer__ubicacion iframe {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+/*---------------------------------- VISTA TABLET------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  /*---------------------header tablet----------------*/
+  .header {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .header .header__titulo {
+    width: 100%;
+  }
+  .header .header__titulo .header__logo {
+    width: 15%;
+  }
+  .header .header__titulo .header__logo #logo {
+    width: 100%;
+    padding: 0rem;
+    object-fit: cover;
+    height: 10rem;
+  }
+  .header .header__titulo #titulo {
+    padding: 0.5rem 0rem;
+  }
+  .header .header__titulo .header__titulo--perfiles {
+    width: 16%;
+    padding: 0.5rem;
+    object-fit: cover;
+  }
+  .header .header__titulo .header__titulo--contacto {
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    border-radius: 0.6rem;
+    transition: all 150ms ease-in-out;
+  }
+  .header .header__titulo .header__titulo--contacto:hover {
+    background-color: #141414;
+    color: #c9c8c8;
+  }
+  .header .header__titulo .header__titulo--contacto a {
+    color: #837f7c;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 3.8rem 1rem;
+  }
+  /*----------------navbar TABLET--------------------*/
+  nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #1f1e1e;
+    position: -webkit-sticky;
+    /* Safari */
+  }
+  nav .menu_centrado {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  nav .menu_centrado .navbar-nav {
+    padding: 0rem;
+    text-align: center;
+  }
+  nav .menu_centrado .navbar-nav li {
+    padding: 0.1rem 0.3rem;
+  }
+  nav .menu_centrado .navbar-nav li a {
+    padding: 0.2rem 0rem;
+    text-transform: uppercase;
+    color: #837f7c;
+    font-size: 1.7rem;
+    transition: all 150ms ease-in-out;
+    border-radius: 0.3rem;
+  }
+  nav .menu_centrado .navbar-nav li a:hover {
+    background-color: #141414;
+    padding: 0.3rem;
+  }
+  /*---------------main tablet------------------*/
+  .main {
+    width: 100%;
+    background-image: url("./../assets/img/logo.jpg");
+    background-size: contain;
+    padding: 0.2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.932);
+    /*------efecto de zoom para tablet (son tres filas de imagenes)-----*/
+  }
+  .main .main__fotoinicio {
+    padding: 1rem;
+  }
+  .main .img_izq {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_izq:active {
+    transform: scale(2) translate(4rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  .main .img_cen {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_cen:active {
+    transform: scale(2) translate(0rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  .main .img_der {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_der:active {
+    transform: scale(2) translate(-4rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  /*------------footer tablet-----------*/
+  .footer {
+    color: #837f7c;
+    background-color: black;
+    padding: 1rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer .footer_centrado {
+    width: 95%;
+    font-size: 1rem;
+  }
+  .footer .footer_centrado .footer__contacto {
+    padding: 1rem;
+    width: 50%;
+  }
+  .footer .footer_centrado .footer__redes {
+    padding: 3.5rem 1rem;
+  }
+  .footer .footer_centrado .footer__redes li {
+    line-height: 2rem;
+  }
+  .footer .footer_centrado .footer__redes li a {
+    margin: 0.2rem;
+    text-decoration: none;
+    color: #837f7c;
+  }
+  .footer .footer_centrado .footer__ubicacion {
+    padding: 0.8rem;
+    width: 100%;
+  }
+  .footer .footer_centrado .footer__ubicacion iframe {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+/*----------------------------- VISTA ESCRITORIO ---------------------------*/
+@media only screen and (min-width: 992px) {
+  /*arranco de 992px para porder trabajar en conjunto con la medida "lg" de bootstrap  */
+  /* -------------header desktop---------- */
+  .header {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+  }
+  .header .header__titulo {
+    width: 100%;
+  }
+  .header .header__titulo .header__logo {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .header__titulo .header__logo #logo {
+    width: 100%;
+    padding: 0rem;
+    object-fit: cover;
+    height: 10rem;
+  }
+  .header .header__titulo #titulo {
+    padding: 1rem 0rem;
+  }
+  .header .header__titulo .header__titulo--perfiles {
+    width: 16%;
+    padding: 0.5rem;
+    object-fit: cover;
+  }
+  .header .header__titulo .header__titulo--contacto {
+    width: 16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    border-radius: 0.6rem;
+    transition: all 150ms ease-in-out;
+  }
+  .header .header__titulo .header__titulo--contacto:hover {
+    background-color: #141414;
+    color: #c9c8c8;
+  }
+  .header .header__titulo .header__titulo--contacto a {
+    color: #837f7c;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    padding: 3.8rem  1.5rem;
+  }
+  /*----------------navbar desktop--------------------*/
+  nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #1f1e1e;
+    position: -webkit-sticky;
+    /* Safari */
+  }
+  nav .menu_centrado {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  nav .menu_centrado .navbar-nav {
+    padding: 0rem;
+  }
+  nav .menu_centrado .navbar-nav li {
+    padding: 0.1rem 1.1rem;
+  }
+  nav .menu_centrado .navbar-nav li a {
+    padding: 1rem;
+    text-transform: uppercase;
+    color: #837f7c;
+    font-size: 2rem;
+    transition: all 150ms ease-in-out;
+    border-radius: 0.3rem;
+  }
+  nav .menu_centrado .navbar-nav li a:hover {
+    background-color: #141414;
+    padding: 1.1rem;
+  }
+  /*---------------main tablet------------------*/
+  .main {
+    width: 100%;
+    background-image: url("./../assets/img/logo.jpg");
+    background-size: contain;
+    padding: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.932);
+    /*------efecto de zoom para desktop (son tres filas de imagenes)-----*/
+  }
+  .main .main__fotoinicio {
+    width: 90%;
+  }
+  .main .img_izq {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_izq:active {
+    transform: scale(1.5) translate(4rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  .main .img_cen {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_cen:active {
+    transform: scale(1.5) translate(0rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  .main .img_der {
+    padding: 0.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .main .img_der:active {
+    transform: scale(1.5) translate(-4rem, 1rem);
+    transition: all 500ms ease-in-out;
+  }
+  /*------------footer desktop-----------*/
+  .footer {
+    color: #837f7c;
+    background-color: black;
+    padding: 1rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer .footer_centrado {
+    width: 95%;
+    font-size: 1rem;
+  }
+  .footer .footer_centrado .footer__contacto {
+    padding: 0rem;
+  }
+  .footer .footer_centrado .footer__redes {
+    padding: 3rem 1rem;
+  }
+  .footer .footer_centrado .footer__redes li {
+    line-height: 2rem;
+  }
+  .footer .footer_centrado .footer__redes li a {
+    margin: 0.2rem;
+    text-decoration: none;
+    color: #837f7c;
+  }
+  .footer .footer_centrado .footer__ubicacion {
+    padding: 3rem 0rem;
+    width: 33%;
   }
   .footer .footer_centrado .footer__ubicacion iframe {
     width: 100%;
