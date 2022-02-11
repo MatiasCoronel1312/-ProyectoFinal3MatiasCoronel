@@ -1,0 +1,14 @@
+@font-face {
+    font-family: typewriter;
+    src: url("https://matiascoronel1312.github.io/ProyectoFinal3MatiasCoronel/assets/font/Typewriter.ttf") format("truetype") , url("./../assets/font/Typewriter.otf") format("truetype"); 
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: typewriter;    
+    text-decoration: none; 
+    list-style-type: none;          
+}

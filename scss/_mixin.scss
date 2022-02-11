@@ -1,0 +1,26 @@
+@mixin widthPaddingObject ($width, $padding, $object-fit)
+{
+    width: $width;
+    padding: $padding;
+    object-fit: $object-fit;
+}
+
+@mixin navbar_sticky ($width, $position,$top, $background-color)
+{
+    width: $width;
+    position: $position;
+    top: $top;
+    background-color: $background-color;
+}
+
+@mixin centradoFlex ($width, $display, $justify-content)
+{
+    width: $width;
+    display: $display;
+    justify-content: $justify-content;
+}
+
+
+    
+
+
