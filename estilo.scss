@@ -4,7 +4,10 @@
 @import "./scss/variables";
 /*---variables con colores que voy a usar---*/
 @import "./scss/mixin";
+/*-----mixin con los atributos mas usados -- */
 
+@import "./scss/each";
+/*-----con clases para el grid ---*/
 
 /* ---------------------------------VISTA MÓVIL-------------------------------- */
 
@@ -32,21 +35,19 @@
                         @include widthPaddingObject (24%,0.2rem ,contain);
                  }
                  .header__titulo--contacto {
-                    @include centradoFlex (25%,flex ,center);
-                       align-items: center;
-                       background-color: $negroButton;
-                       border-radius: 0.6rem;
-                       transition: all 150ms ease-in-out;
-                       &:hover {            
+                        @include centradoFlex (25%,flex ,center);
+                        align-items: center;
+                        background-color: $negroButton;
+                        border-radius: 0.6rem;
+                        transition: all 150ms ease-in-out;                       
+                        color:$gris;              
+                        text-transform:uppercase;          
+                        font-size:1rem;
+                        &:hover {            
                         background-color:$negroHover;    
                         color: $grisHover;        
                        } 
-                       a {    
-                           padding: 2rem 0rem;
-                           color:$gris;              
-                           text-transform:uppercase;          
-                           font-size:1rem;    
-                        }
+                       
                   }
 
             } 
@@ -55,7 +56,7 @@
 
      /*----------------navbar movil--------------------*/
          
-    nav {
+    #nav {
             @include navbar_sticky (100%,sticky,0,$negro);
              position: -webkit-sticky; /* Safari */
 
@@ -112,7 +113,7 @@
                 border-radius: 1rem;
                 cursor: pointer;
                 &:active {
-                   transform: scale(1.8) translate(4rem, 1rem);
+                   transform: scale(1.8) translate(3rem, 1rem);
                    transition: all 500ms ease-in-out;
                 }
             
@@ -124,13 +125,43 @@
             cursor: pointer;
                 &:active {
             
-                      transform: scale(1.8) translate(-4rem, 1rem);
+                      transform: scale(1.8) translate(-3rem, 1rem);
                       transition: all 500ms ease-in-out;
                          }
             
-               }
+         }
+         .main__contenedor {
+            display: grid;
             
-        }
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "grid_ludmi grid_ludmi"
+            "grid_ludmi_foto grid_ludmi_foto"
+             "grid_ludmi_perfil grid_ludmi_perfil"
+            "grid_robert grid_robert"
+            "grid_robert_foto grid_robert_foto"
+            "grid_robert_perfil grid_robert_perfil"
+            "grid_jami grid_jami"
+            "grid_jami_foto grid_jami_foto"
+            " grid_jami_perfil grid_jami_perfil";
+
+            .grid_ludmi_foto {
+                width: 50%;
+                margin: auto;
+            }
+            .grid_robert_foto {
+                width: 50%;
+                margin: auto;
+            }
+            .grid_jami_foto{
+                width: 50%;
+                margin: auto;
+            }
+
+         }
+            
+    }
            
     
 
@@ -219,21 +250,19 @@
                         @include widthPaddingObject (25%,0.2rem ,contain);
                  }
                  .header__titulo--contacto {
-                    @include centradoFlex (25%,flex ,center);
-                       align-items: center;
-                       background-color: $negroButton;
-                       border-radius: 0.6rem;
-                       transition: all 150ms ease-in-out;
-                       &:hover {            
+                        @include centradoFlex (25%,flex ,center);
+                        align-items: center;
+                        background-color: $negroButton;
+                        border-radius: 0.6rem;
+                        transition: all 150ms ease-in-out;
+                        color:$gris;              
+                        text-transform:uppercase;          
+                        font-size:1.6rem;
+                        &:hover {            
                         background-color:$negroHover;    
                         color: $grisHover;        
-                       } 
-                       a {    
-                           color:$gris;              
-                           text-transform:uppercase;          
-                           font-size:1.6rem; 
-                           padding: 3.5rem 0rem;   
-                        }
+                        } 
+                       
                   }
 
             } 
@@ -242,7 +271,7 @@
 
      /*----------------navbar movil L--------------------*/
          
-    nav {
+    #nav {
             @include navbar_sticky (100%,sticky,0,$negro);
              position: -webkit-sticky; /* Safari */
 
@@ -315,6 +344,33 @@
                 }
         
         }
+        .main__contenedor {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "grid_ludmi grid_ludmi"
+            "grid_ludmi_foto grid_ludmi_foto"
+             "grid_ludmi_perfil grid_ludmi_perfil"
+            "grid_robert grid_robert"
+            "grid_robert_foto grid_robert_foto"
+            "grid_robert_perfil grid_robert_perfil"
+            "grid_jami grid_jami"
+            "grid_jami_foto grid_jami_foto"
+            " grid_jami_perfil grid_jami_perfil";
+            .grid_ludmi_foto {
+                width: 50%;
+                margin: auto;
+            }
+            .grid_robert_foto {
+                width: 50%;
+                margin: auto;
+            }
+            .grid_jami_foto{
+                width: 50%;
+                margin: auto;
+            }
+            }
         
            
     }
@@ -335,20 +391,23 @@
         width: 95%;
         font-size: 1rem;
         .footer__contacto {    
-            padding: 0.3rem;          
+            padding: 0.3rem;
+            line-height: 2rem;          
         }
-        .footer__redes li {            
-            line-height: 2.5rem;
-            a{
-                margin: 0.2rem;
-                text-decoration: none;
-                color:$gris;
-                padding: 3.5rem 1rem;
-                width: 100%;
+        .footer__redes {
+               padding: 3rem 1rem;
+               li {            
+                   line-height: 2.5rem;            
+                   a{
+                       margin: 0.2rem;
+                       text-decoration: none;
+                       color:$gris;                
+                       width: 100%;
+                    }
+                }
             }
-        }
         .footer__ubicacion {
-            padding: 0.8rem;
+            padding: 0.8rem  ;
             width: 100%;
             iframe {
                 width: 100%;
@@ -367,7 +426,7 @@
 @media only screen and (min-width:768px) and (max-width:992px) {   
 
  /*---------------------header tablet----------------*/
-          .header {      
+        .header {      
             
             background-color: $negro;            
             @include centradoFlex (100%,flex ,center);
@@ -389,21 +448,19 @@
                         @include widthPaddingObject (16%,0.5rem ,cover);
                  }
                  .header__titulo--contacto {
-                    @include centradoFlex (16%,flex ,center);
-                       align-items: center;
-                       background-color: $negroButton;
-                       border-radius: 0.6rem;
-                       transition: all 150ms ease-in-out;
-                       &:hover {            
+                        @include centradoFlex (16%,flex ,center);
+                        align-items: center;
+                        background-color: $negroButton;
+                        border-radius: 0.6rem;
+                        transition: all 150ms ease-in-out;
+                        color:$gris;              
+                        text-transform:uppercase;          
+                        font-size:1.2rem;
+                        &:hover {            
                         background-color:$negroHover;    
                         color: $grisHover;        
                        } 
-                       a {    
-                           color:$gris;              
-                           text-transform:uppercase;          
-                           font-size:1.2rem; 
-                           padding: 3.8rem 1rem;   
-                        }
+                       
                   }
 
             } 
@@ -412,7 +469,7 @@
 
      /*----------------navbar TABLET--------------------*/
          
-    nav {
+    #nav {
             @include navbar_sticky (100%,sticky,0,#1f1e1e);
              position: -webkit-sticky; /* Safari */
              .menu_centrado {
@@ -423,7 +480,7 @@
                        li {
                            padding: 0.1rem 0.3rem;               
                            a {    
-                               padding: 0.2rem 0rem;
+                               padding: 0.2rem 0.5rem;
                                text-transform: uppercase;         
                                color: $gris;                    
                                font-size: 1.7rem;                   
@@ -482,6 +539,33 @@
                       transition: all 500ms ease-in-out;
                 }
             }
+
+        .main__contenedor {
+                display: grid;
+                padding: 1rem;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: auto auto;
+                grid-template-areas:
+                "grid_ludmi grid_ludmi"
+                "grid_ludmi_foto grid_ludmi_perfil"
+                "grid_robert grid_robert"
+                "grid_robert_foto grid_robert_perfil"
+                "grid_jami grid_jami"
+                "grid_jami_foto grid_jami_perfil";
+                .grid_ludmi_foto {
+                    width:90%;
+                    margin: auto;
+                }
+                .grid_robert_foto {
+                    width: 90%;
+                    margin: auto;
+                }
+                .grid_jami_foto{
+                    width: 90%;
+                    margin: auto;
+                }
+                }
+
     }
 
 
@@ -504,7 +588,7 @@
             width: 50%;        
         }
         .footer__redes {
-            padding: 3.5rem 1rem;
+            padding: 3.8rem 1rem;
             li {        
                 line-height: 2rem;
                 a{
@@ -565,16 +649,14 @@
                           background-color: $negroButton;
                           border-radius: 0.6rem;
                           transition: all 150ms ease-in-out;
+                          color:$gris;              
+                          text-transform:uppercase;          
+                          font-size:1.7rem;
                           &:hover {            
                            background-color:$negroHover;    
                            color: $grisHover;        
                           } 
-                          a {    
-                              color:$gris;              
-                              text-transform:uppercase;          
-                              font-size:1.7rem;
-                              padding:3.8rem  1.5rem;    
-                           }
+                          
                      }
    
                } 
@@ -583,7 +665,7 @@
    
         /*----------------navbar desktop--------------------*/
             
-       nav {
+       #nav {
                @include navbar_sticky (100%,sticky,0,#1f1e1e);
                 position: -webkit-sticky; /* Safari */
                 .menu_centrado {
@@ -591,9 +673,9 @@
                    .navbar-nav  {    
                           padding: 0rem;                
                           li {
-                              padding: 0.1rem 1.1rem;               
+                              padding: 0.1rem 1rem;               
                               a {    
-                                  padding: 1rem;
+                                  padding: 0.5rem;
                                   text-transform: uppercase;         
                                   color: $gris;                    
                                   font-size: 2rem;                   
@@ -609,7 +691,7 @@
                 }
         }
    
-        /*---------------main tablet------------------*/
+        /*---------------main desktop------------------*/
    
        .main {
            width: 100%;
@@ -621,7 +703,7 @@
            .main__fotoinicio {
                width: 90%;
            }
-           /*------efecto de zoom para desktop (son tres filas de imagenes)-----*/
+           /*---efecto de zoom para desktop (son tres filas de imagenes)--*/
         .img_izq {
             padding: 0.2rem;
             border-radius: 1rem;
@@ -652,10 +734,38 @@
                       transition: all 500ms ease-in-out;
                 }
             }
-              
-       }
+       .main__contenedor {
+            padding: 1.3rem;
+            font-size: 1.2rem;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "grid_ludmi grid_ludmi"
+            "grid_ludmi_foto grid_ludmi_perfil"
+            "grid_robert grid_robert"
+            "grid_robert_foto grid_robert_perfil"
+            "grid_jami grid_jami"
+            "grid_jami_foto grid_jami_perfil";
+            .grid_ludmi_foto {
+               width:80%;
+               margin: auto;
+            }
+            .grid_robert_foto {
+                width: 80%;
+                margin: auto;
+            }
+            .grid_jami_foto{
+                width: 80%;
+                margin: auto;
+            }
+        }
+
+
+
+
    
-   
+    }
    
    
    

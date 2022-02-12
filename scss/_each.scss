@@ -1,0 +1,9 @@
+/*--clases para el grid de la pag "nosotros" ----*/
+
+$mapGrid : (grid_ludmi:grid_ludmi, grid_ludmi_perfil:grid_ludmi_perfil, grid_ludmi_foto:grid_ludmi_foto, grid_robert:grid_robert, grid_robert_perfil:grid_robert_perfil, grid_robert_foto:grid_robert_foto, grid_jami:grid_jami, grid_jami_perfil:grid_jami_perfil, grid_jami_foto:grid_jami_foto);
+
+@each $grid_ludmi, $grid_ludmi in $mapGrid {
+    .#{$grid_ludmi} {
+        grid-area: $grid_ludmi;
+    }
+ }

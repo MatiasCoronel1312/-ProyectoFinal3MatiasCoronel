@@ -16,6 +16,45 @@
 /*---llamo a la pagina reset para padding 0 y margen 0 ---*/
 /*------variables-----*/
 /*---variables con colores que voy a usar---*/
+/*-----mixin con los atributos mas usados -- */
+/*--clases para el grid de la pag "nosotros" ----*/
+.grid_ludmi {
+  grid-area: grid_ludmi;
+}
+
+.grid_ludmi_perfil {
+  grid-area: grid_ludmi_perfil;
+}
+
+.grid_ludmi_foto {
+  grid-area: grid_ludmi_foto;
+}
+
+.grid_robert {
+  grid-area: grid_robert;
+}
+
+.grid_robert_perfil {
+  grid-area: grid_robert_perfil;
+}
+
+.grid_robert_foto {
+  grid-area: grid_robert_foto;
+}
+
+.grid_jami {
+  grid-area: grid_jami;
+}
+
+.grid_jami_perfil {
+  grid-area: grid_jami_perfil;
+}
+
+.grid_jami_foto {
+  grid-area: grid_jami_foto;
+}
+
+/*-----con clases para el grid ---*/
 /* ---------------------------------VISTA MÓVIL-------------------------------- */
 @media screen and (max-width: 576px) {
   /*------------------header mobile------------*/
@@ -55,19 +94,16 @@
     background-color: #0f0f0f;
     border-radius: 0.6rem;
     transition: all 150ms ease-in-out;
+    color: #837f7c;
+    text-transform: uppercase;
+    font-size: 1rem;
   }
   .header .header__titulo .header__titulo--contacto:hover {
     background-color: #141414;
     color: #c9c8c8;
   }
-  .header .header__titulo .header__titulo--contacto a {
-    padding: 2rem 0rem;
-    color: #837f7c;
-    text-transform: uppercase;
-    font-size: 1rem;
-  }
   /*----------------navbar movil--------------------*/
-  nav {
+  #nav {
     width: 100%;
     position: sticky;
     top: 0;
@@ -75,26 +111,26 @@
     position: -webkit-sticky;
     /* Safari */
   }
-  nav .button_nav {
+  #nav .button_nav {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  nav .button_nav .button {
+  #nav .button_nav .button {
     width: 90%;
   }
-  nav .navbar-nav {
+  #nav .navbar-nav {
     padding: 0.5rem;
     text-align: center;
   }
-  nav .navbar-nav a {
+  #nav .navbar-nav a {
     text-transform: uppercase;
     color: #837f7c;
     font-size: 1.5rem;
     transition: all 150ms ease-in-out;
     border-radius: 0.3rem;
   }
-  nav .navbar-nav a:hover {
+  #nav .navbar-nav a:hover {
     background-color: #141414;
     padding: 0.6rem;
   }
@@ -116,7 +152,7 @@
     cursor: pointer;
   }
   .main .img_izq_s:active {
-    transform: scale(1.8) translate(4rem, 1rem);
+    transform: scale(1.8) translate(3rem, 1rem);
     transition: all 500ms ease-in-out;
   }
   .main .img_der_s {
@@ -125,8 +161,26 @@
     cursor: pointer;
   }
   .main .img_der_s:active {
-    transform: scale(1.8) translate(-4rem, 1rem);
+    transform: scale(1.8) translate(-3rem, 1rem);
     transition: all 500ms ease-in-out;
+  }
+  .main .main__contenedor {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "grid_ludmi grid_ludmi" "grid_ludmi_foto grid_ludmi_foto" "grid_ludmi_perfil grid_ludmi_perfil" "grid_robert grid_robert" "grid_robert_foto grid_robert_foto" "grid_robert_perfil grid_robert_perfil" "grid_jami grid_jami" "grid_jami_foto grid_jami_foto" " grid_jami_perfil grid_jami_perfil";
+  }
+  .main .main__contenedor .grid_ludmi_foto {
+    width: 50%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_robert_foto {
+    width: 50%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_jami_foto {
+    width: 50%;
+    margin: auto;
   }
   /*-------------------footer mobile---------------------*/
   .footer {
@@ -205,19 +259,16 @@
     background-color: #0f0f0f;
     border-radius: 0.6rem;
     transition: all 150ms ease-in-out;
+    color: #837f7c;
+    text-transform: uppercase;
+    font-size: 1.6rem;
   }
   .header .header__titulo .header__titulo--contacto:hover {
     background-color: #141414;
     color: #c9c8c8;
   }
-  .header .header__titulo .header__titulo--contacto a {
-    color: #837f7c;
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    padding: 3.5rem 0rem;
-  }
   /*----------------navbar movil L--------------------*/
-  nav {
+  #nav {
     width: 100%;
     position: sticky;
     top: 0;
@@ -225,26 +276,26 @@
     position: -webkit-sticky;
     /* Safari */
   }
-  nav .button_nav {
+  #nav .button_nav {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  nav .button_nav .button {
+  #nav .button_nav .button {
     width: 95%;
   }
-  nav .navbar-nav {
+  #nav .navbar-nav {
     padding: 0.5rem;
     text-align: center;
   }
-  nav .navbar-nav a {
+  #nav .navbar-nav a {
     text-transform: uppercase;
     color: #837f7c;
     font-size: 1.5rem;
     transition: all 150ms ease-in-out;
     border-radius: 0.3rem;
   }
-  nav .navbar-nav a:hover {
+  #nav .navbar-nav a:hover {
     background-color: #141414;
     padding: 1.1rem;
   }
@@ -279,6 +330,24 @@
     transform: scale(1.5) translate(-4rem, 1rem);
     transition: all 500ms ease-in-out;
   }
+  .main .main__contenedor {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "grid_ludmi grid_ludmi" "grid_ludmi_foto grid_ludmi_foto" "grid_ludmi_perfil grid_ludmi_perfil" "grid_robert grid_robert" "grid_robert_foto grid_robert_foto" "grid_robert_perfil grid_robert_perfil" "grid_jami grid_jami" "grid_jami_foto grid_jami_foto" " grid_jami_perfil grid_jami_perfil";
+  }
+  .main .main__contenedor .grid_ludmi_foto {
+    width: 50%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_robert_foto {
+    width: 50%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_jami_foto {
+    width: 50%;
+    margin: auto;
+  }
   /*-------------------footer mobile L ---------------------*/
   .footer {
     color: #837f7c;
@@ -294,6 +363,10 @@
   }
   .footer .footer_centrado .footer__contacto {
     padding: 0.3rem;
+    line-height: 2rem;
+  }
+  .footer .footer_centrado .footer__redes {
+    padding: 3rem 1rem;
   }
   .footer .footer_centrado .footer__redes li {
     line-height: 2.5rem;
@@ -302,7 +375,6 @@
     margin: 0.2rem;
     text-decoration: none;
     color: #837f7c;
-    padding: 3.5rem 1rem;
     width: 100%;
   }
   .footer .footer_centrado .footer__ubicacion {
@@ -353,19 +425,16 @@
     background-color: #0f0f0f;
     border-radius: 0.6rem;
     transition: all 150ms ease-in-out;
+    color: #837f7c;
+    text-transform: uppercase;
+    font-size: 1.2rem;
   }
   .header .header__titulo .header__titulo--contacto:hover {
     background-color: #141414;
     color: #c9c8c8;
   }
-  .header .header__titulo .header__titulo--contacto a {
-    color: #837f7c;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    padding: 3.8rem 1rem;
-  }
   /*----------------navbar TABLET--------------------*/
-  nav {
+  #nav {
     width: 100%;
     position: sticky;
     top: 0;
@@ -373,27 +442,27 @@
     position: -webkit-sticky;
     /* Safari */
   }
-  nav .menu_centrado {
+  #nav .menu_centrado {
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
-  nav .menu_centrado .navbar-nav {
+  #nav .menu_centrado .navbar-nav {
     padding: 0rem;
     text-align: center;
   }
-  nav .menu_centrado .navbar-nav li {
+  #nav .menu_centrado .navbar-nav li {
     padding: 0.1rem 0.3rem;
   }
-  nav .menu_centrado .navbar-nav li a {
-    padding: 0.2rem 0rem;
+  #nav .menu_centrado .navbar-nav li a {
+    padding: 0.2rem 0.5rem;
     text-transform: uppercase;
     color: #837f7c;
     font-size: 1.7rem;
     transition: all 150ms ease-in-out;
     border-radius: 0.3rem;
   }
-  nav .menu_centrado .navbar-nav li a:hover {
+  #nav .menu_centrado .navbar-nav li a:hover {
     background-color: #141414;
     padding: 0.3rem;
   }
@@ -437,6 +506,25 @@
     transform: scale(2) translate(-4rem, 1rem);
     transition: all 500ms ease-in-out;
   }
+  .main .main__contenedor {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "grid_ludmi grid_ludmi" "grid_ludmi_foto grid_ludmi_perfil" "grid_robert grid_robert" "grid_robert_foto grid_robert_perfil" "grid_jami grid_jami" "grid_jami_foto grid_jami_perfil";
+  }
+  .main .main__contenedor .grid_ludmi_foto {
+    width: 90%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_robert_foto {
+    width: 90%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_jami_foto {
+    width: 90%;
+    margin: auto;
+  }
   /*------------footer tablet-----------*/
   .footer {
     color: #837f7c;
@@ -455,7 +543,7 @@
     width: 50%;
   }
   .footer .footer_centrado .footer__redes {
-    padding: 3.5rem 1rem;
+    padding: 3.8rem 1rem;
   }
   .footer .footer_centrado .footer__redes li {
     line-height: 2rem;
@@ -517,19 +605,16 @@
     background-color: #0f0f0f;
     border-radius: 0.6rem;
     transition: all 150ms ease-in-out;
+    color: #837f7c;
+    text-transform: uppercase;
+    font-size: 1.7rem;
   }
   .header .header__titulo .header__titulo--contacto:hover {
     background-color: #141414;
     color: #c9c8c8;
   }
-  .header .header__titulo .header__titulo--contacto a {
-    color: #837f7c;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    padding: 3.8rem  1.5rem;
-  }
   /*----------------navbar desktop--------------------*/
-  nav {
+  #nav {
     width: 100%;
     position: sticky;
     top: 0;
@@ -537,30 +622,30 @@
     position: -webkit-sticky;
     /* Safari */
   }
-  nav .menu_centrado {
+  #nav .menu_centrado {
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
-  nav .menu_centrado .navbar-nav {
+  #nav .menu_centrado .navbar-nav {
     padding: 0rem;
   }
-  nav .menu_centrado .navbar-nav li {
-    padding: 0.1rem 1.1rem;
+  #nav .menu_centrado .navbar-nav li {
+    padding: 0.1rem 1rem;
   }
-  nav .menu_centrado .navbar-nav li a {
-    padding: 1rem;
+  #nav .menu_centrado .navbar-nav li a {
+    padding: 0.5rem;
     text-transform: uppercase;
     color: #837f7c;
     font-size: 2rem;
     transition: all 150ms ease-in-out;
     border-radius: 0.3rem;
   }
-  nav .menu_centrado .navbar-nav li a:hover {
+  #nav .menu_centrado .navbar-nav li a:hover {
     background-color: #141414;
     padding: 1.1rem;
   }
-  /*---------------main tablet------------------*/
+  /*---------------main desktop------------------*/
   .main {
     width: 100%;
     background-image: url("./../assets/img/logo.jpg");
@@ -568,7 +653,7 @@
     padding: 2rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.932);
-    /*------efecto de zoom para desktop (son tres filas de imagenes)-----*/
+    /*---efecto de zoom para desktop (son tres filas de imagenes)--*/
   }
   .main .main__fotoinicio {
     width: 90%;
@@ -599,6 +684,26 @@
   .main .img_der:active {
     transform: scale(1.5) translate(-4rem, 1rem);
     transition: all 500ms ease-in-out;
+  }
+  .main .main__contenedor {
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "grid_ludmi grid_ludmi" "grid_ludmi_foto grid_ludmi_perfil" "grid_robert grid_robert" "grid_robert_foto grid_robert_perfil" "grid_jami grid_jami" "grid_jami_foto grid_jami_perfil";
+  }
+  .main .main__contenedor .grid_ludmi_foto {
+    width: 80%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_robert_foto {
+    width: 80%;
+    margin: auto;
+  }
+  .main .main__contenedor .grid_jami_foto {
+    width: 80%;
+    margin: auto;
   }
   /*------------footer desktop-----------*/
   .footer {

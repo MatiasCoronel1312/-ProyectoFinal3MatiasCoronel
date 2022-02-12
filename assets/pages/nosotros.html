@@ -21,7 +21,8 @@
 
     <header class="header">
         <div class="header__titulo row">
-            <a class="header__logo" href="./../../index.html"><img id="logo" class=" col-3 col-md-2 col-lg-2" src="./../img/logo.jpg" alt="logo"></a>
+            <a class="header__logo" href="./../../index.html"><img id="logo" class=" col-3 col-md-2 col-lg-2"
+                    src="./../img/logo.jpg" alt="logo"></a>
 
             <img id="titulo" class="col-9 col-md-2 col-lg-2" src="./../img/titulo.jpg" alt="AntifaTattoo">
 
@@ -33,7 +34,7 @@
             <img class="header__titulo--perfiles col-3 col-md-2 col-lg-2" src="./../img/luchy.jpg" alt="PerfilLuchy">
 
 
-            <a class="col-3 col-md-2 col-lg-2" href="./contactos.html">Contactos</a>
+            <a class="header__titulo--contacto col-3 col-md-2 col-lg-2" href="./contactos.html">Contactos</a>
 
         </div>
     </header>
@@ -61,34 +62,27 @@
         <section class="main__section">
             <h1>Sobre nosotros:</h1>
             <div class="main__nosotros">
-                <article>
-                    <h2>Ludmila Enriquez</h2>
-                    <div class="main__ludmi">
-                        <p>empecé tatuándome a mi misma, me acerque a algunos estudios y conocí a varios artistas, fui aprendiz aquí y allá, descubriendo así los diferentes estilos de tatuajes, en especial del neotradi me llamó la atención por el manejo de texturas y la forma de sintetizar del tradicional y neotradicional.
-                            Algunos lo definen como neotradi, a mí me gusta decir que mi trabajo está basado en texturas y puntos, lo cual le da un toque oscuro al tatuaje, logrando así imágenes que permanecen.
-                            siempre con la convicción de que tatuar es lo único que quiero hacer. </p>
-                        <img src="../img/luchy2.jpg" alt="foto luchy">
-                    </div>
-                </article>
+                <article class="main__contenedor">
 
-                <article>
-                    <h2>Robert Gaitan</h2>
-                    <div class="main__robert">
-                        <p>Dedicado al arte del tatuaje con más de 10 años de experiencia con estudios de diseño gráfico y un marcado gusto por la ilustración.
-                            Me gustan las temáticas de animales, caricaturas, cultura pop 90’s, videojuegos influenciados en el estilo neotradicional, tradicional y un poco de japonés.
-                            En lo que a tatuaje respecta, el New School fue lo que más me atrajo, pues era lo que más se acercaba a los patrones estéticos que tenía, pero en el proceso comencé a entender más el tradicional, y hoy en día hago una interpretación de los elementos estéticos que me gustan a estos estilos, neotradicional y tradicional, pues creo que sus características son los más adecuadas para cubrir los aspectos que considero más importantes del tatuaje: fuerza, legibilidad y perdurabilidad.
-                            </p>
-                        <img src="../img/robert3.jpg" alt="foto Robert">
-                    </div>
-                </article>
+                    <h2 class="grid_ludmi">Ludmila Enriquez</h2>
 
-                <article>
-                    <h2>Jamaica Priscila</h2>
-                    <div class="main__jami">
-                        <p>Me apasiona el tradi, pero no me gusta encasillarme en un solo estilo, es por eso que muchos de mis tatuajes expresan las ideas de cada cliente a todo color.
-                            Me gustan los diseños clásicos y los tatuajes tradicionales, me interesa conocer el significado que tiene para cada cliente su diseño, siento que conociendo esa idea puedes hacer que cada detalle cuente desde un tatuaje pequeño hasta uno más grande </p>
-                        <img src="../img/jami.jpg" alt="foto Jamaica">
-                    </div>
+                    <p class="grid_ludmi_perfil">Empecé tatuándome a mi misma, me acerque a algunos estudios y conocí a varios artistas, fui aprendiz aquí y allá, descubriendo así los diferentes estilos de tatuajes, en especial del neotradi me llamó la atención por el manejo de texturas y la forma de sintetizar del tradicional y neotradicional. Algunos lo definen como neotradi, a mí me gusta decir que mi trabajo está basado en texturas y puntos, lo cual le da un toque oscuro al tatuaje, logrando así imágenes que permanecen.
+                        Siempre con la convicción de que tatuar es lo único que quiero hacer. </p>
+
+                    <img class="grid_ludmi_foto" src="../img/luchy2.jpg" alt="foto luchy">
+
+                    <h2 class="grid_robert">Robert Gaitan</h2>
+
+                    <p class="grid_robert_perfil">Dedicado al arte del tatuaje con más de 10 años de experiencia con estudios de diseño gráfico y un marcado gusto por la ilustración. En lo que a tatuaje respecta, el New School fue lo que más me atrajo, pues era lo que más se acercaba a los patrones estéticos que tenía, pero en el proceso comencé a entender más el tradicional, y hoy en día hago una interpretación de los elementos estéticos que me gustan a estos estilos, neotradicional y tradicional, pues creo que sus características son los más adecuadas para cubrir los aspectos que considero más importantes del tatuaje: fuerza, legibilidad y perdurabilidad.
+                    </p>
+
+                    <img class="grid_robert_foto" src="../img/robert3.jpg" alt="foto Robert">
+
+                    <h2 class="grid_jami">Jamaica Priscila</h2>
+
+                    <p class="grid_jami_perfil">Me apasiona el tradi, pero no me gusta encasillarme en un solo estilo, es por eso que muchos de mis tatuajes expresan las ideas de cada cliente a todo color. Me gustan los diseños clásicos y los tatuajes tradicionales, me interesa conocer el significado que tiene para cada cliente su diseño, siento que conociendo esa idea puedes hacer que cada detalle cuente desde un tatuaje pequeño hasta uno más grande. Me gustan las temáticas de animales, caricaturas, cultura pop 90’s, videojuegos influenciados en el estilo neotradicional, tradicional y un poco de japonés. </p>
+
+                    <img class="grid_jami_foto" src="../img/jami.jpg" alt="foto Jamaica">
 
                 </article>
             </div>
@@ -122,21 +116,23 @@
                 <ul>
                     <li><img src="./../img/facebook.png" alt="iconofacebook" width="32px"></li>
 
-                    <li><a href="https://www.facebook.com/Ludmila-Enriquez-427223117483769">Nogodstattoo</a> </li>
-                    <li><a href="https://www.facebook.com/noduermasmaass">noduermasmaass</a> </li>
+                    <li><a href="https://www.facebook.com/Ludmila-Enriquez-427223117483769"
+                            target="_blank">Nogodstattoo</a> </li>
+                    <li><a href="https://www.facebook.com/noduermasmaass" target="_blank">noduermasmaass</a> </li>
 
                     <li><img src="./../img/instagram.png" alt="logoinstagram" width="32px"></li>
 
-                    <li><a href="https://instagram.com/antifatattooestudio">@antifatattooestudio</a> </li>
-                    <li><a href="https://instagram.com/nogodstattoos">@nogodstattoos</a></li>
-                    <li><a href="https://instagram.com/jamaicapriscila">@jamaicaprisila</a></li>
-                    <li><a href="https://instagram.com/_el_rober_tatts_">@_el_rober_tatts_</a></li>
+                    <li><a href="https://instagram.com/antifatattooestudio" target="_blank">@antifatattooestudio</a>
+                    </li>
+                    <li><a href="https://instagram.com/nogodstattoos" target="_blank">@nogodstattoos</a></li>
+                    <li><a href="https://instagram.com/jamaicapriscila" target="_blank">@jamaicaprisila</a></li>
+                    <li><a href="https://instagram.com/_el_rober_tatts_" target="_blank">@_el_rober_tatts_</a></li>
                 </ul>
             </div>
             <div class="footer__ubicacion col-12 col-sm-12 col-md-4">
 
                 <h6>Ubicacion:</h6>
-                <iframe 
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.468347383033!2d-58.377178984674444!3d-34.84445747778286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd4cd80482a65%3A0xce15445cd227aa93!2s25%20de%20Mayo%20203%2C%20B1848%20Ministro%20Rivadavia%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1644351842048!5m2!1ses!2sar"
                     style="border:0;" allowfullscreen="" loading="lazy" alt="MapaUbicacion"
                     title="Ubicacion del estudio"></iframe>
@@ -147,8 +143,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </body>
 
