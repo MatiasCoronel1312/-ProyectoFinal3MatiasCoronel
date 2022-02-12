@@ -42,7 +42,7 @@
                         transition: all 150ms ease-in-out;                       
                         color:$gris;              
                         text-transform:uppercase;          
-                        font-size:1rem;
+                        font-size:1.2rem;
                         &:hover {            
                         background-color:$negroHover;    
                         color: $grisHover;        
@@ -160,6 +160,21 @@
             }
 
          }
+
+         .section__form {
+             display: flex;
+             justify-content: center;
+             padding: 1rem;
+            form{             
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                div {
+                    padding: 0.3rem;
+                    font-size: 0.8rem;
+                }
+            }
+         }
             
     }
            
@@ -257,7 +272,7 @@
                         transition: all 150ms ease-in-out;
                         color:$gris;              
                         text-transform:uppercase;          
-                        font-size:1.6rem;
+                        font-size:2rem;
                         &:hover {            
                         background-color:$negroHover;    
                         color: $grisHover;        
@@ -370,7 +385,21 @@
                 width: 50%;
                 margin: auto;
             }
-            }
+        }
+        .section__form {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+           form{
+            
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               div {
+                   padding: 0.3rem;
+               }
+           }
+        }
         
            
     }
@@ -455,7 +484,7 @@
                         transition: all 150ms ease-in-out;
                         color:$gris;              
                         text-transform:uppercase;          
-                        font-size:1.2rem;
+                        font-size:1.8rem;
                         &:hover {            
                         background-color:$negroHover;    
                         color: $grisHover;        
@@ -564,7 +593,21 @@
                     width: 90%;
                     margin: auto;
                 }
-                }
+        }
+        .section__form {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+           form{
+            
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               div {
+                   padding: 0.5rem;
+               }
+           }
+        }
 
     }
 
@@ -651,7 +694,7 @@
                           transition: all 150ms ease-in-out;
                           color:$gris;              
                           text-transform:uppercase;          
-                          font-size:1.7rem;
+                          font-size:2.2rem;
                           &:hover {            
                            background-color:$negroHover;    
                            color: $grisHover;        
@@ -759,6 +802,20 @@
                 width: 80%;
                 margin: auto;
             }
+        }
+        .section__form {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+           form{
+            
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               div {
+                   padding: 0.5rem;
+               }
+           }
         }
 
 
