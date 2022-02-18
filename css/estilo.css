@@ -540,6 +540,15 @@
     grid-template-rows: auto auto;
     grid-template-areas: "grid_ludmi grid_ludmi" "grid_ludmi_foto grid_ludmi_perfil" "grid_robert grid_robert" "grid_robert_foto grid_robert_perfil" "grid_jami grid_jami" "grid_jami_foto grid_jami_perfil";
   }
+  .main .main__contenedor .grid_ludmi {
+    padding: 1rem;
+  }
+  .main .main__contenedor .grid_robert {
+    padding: 1rem;
+  }
+  .main .main__contenedor .grid_jami {
+    padding: 1rem;
+  }
   .main .main__contenedor .grid_ludmi_foto {
     width: 90%;
     margin: auto;
@@ -732,6 +741,15 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: auto auto;
     grid-template-areas: "grid_ludmi grid_ludmi" "grid_ludmi_foto grid_ludmi_perfil" "grid_robert grid_robert" "grid_robert_foto grid_robert_perfil" "grid_jami grid_jami" "grid_jami_foto grid_jami_perfil";
+  }
+  .main .main__contenedor .grid_ludmi {
+    padding: 1rem;
+  }
+  .main .main__contenedor .grid_robert {
+    padding: 1rem;
+  }
+  .main .main__contenedor .grid_jami {
+    padding: 1rem;
   }
   .main .main__contenedor .grid_ludmi_foto {
     width: 80%;

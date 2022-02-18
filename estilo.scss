@@ -527,7 +527,7 @@
 
      /*---------------main tablet------------------*/
 
-    .main {
+.main {
         width: 100%;
         background-image: url("./../assets/img/logo.jpg") ;
         background-size: contain;
@@ -581,6 +581,15 @@
                 "grid_robert_foto grid_robert_perfil"
                 "grid_jami grid_jami"
                 "grid_jami_foto grid_jami_perfil";
+                .grid_ludmi {
+                    padding: 1rem;
+                }
+                .grid_robert {
+                    padding: 1rem;
+                }
+                .grid_jami {
+                    padding: 1rem;
+                }
                 .grid_ludmi_foto {
                     width:90%;
                     margin: auto;
@@ -736,7 +745,7 @@
    
         /*---------------main desktop------------------*/
    
-       .main {
+.main {
            width: 100%;
            background-image: url("./../assets/img/logo.jpg") ;
            background-size: contain;
@@ -790,6 +799,15 @@
             "grid_robert_foto grid_robert_perfil"
             "grid_jami grid_jami"
             "grid_jami_foto grid_jami_perfil";
+            .grid_ludmi {
+                padding: 1rem;
+            }
+            .grid_robert {
+                padding: 1rem;
+            }
+            .grid_jami {
+                padding: 1rem;
+            }
             .grid_ludmi_foto {
                width:80%;
                margin: auto;
